@@ -17,6 +17,3 @@ export const getFilteredContacts = store => {
 
   return filteredContacts;
 };
-
-export const getIsLoading = store => store.contacts.isLoading;
-export const getError = store => store.contacts.error;

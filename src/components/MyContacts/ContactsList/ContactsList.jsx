@@ -1,23 +1,19 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import Loader from '../../Loader/Loader';
 
 import {
   deleteContact,
   fetchContacts,
 } from '../../../redux/contacts/contacts-operations';
-import {
-  getFilteredContacts,
-  getIsLoading,
-  getError,
-} from '../../../redux/selectors';
-import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import { getFilteredContacts } from '../../../redux/selectors';
+import ErrorMessage from '../../ErrorMessage/ErrorMessage';
 
 import styles from './contacts-list.module.css';
 
 const ContactList = () => {
   const items = useSelector(getFilteredContacts);
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
+  const { isLoading, error } = useSelector(getFilteredContacts);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,23 +25,26 @@ const ContactList = () => {
   };
 
   const elements = items.map(({ id, name, number }) => (
-    <li key={id}>
-      {' '}
-      {name}: {number}{' '}
+    <li key={id} className={styles.item}>
+      <p>
+        {' '}
+        {name}: {number}{' '}
+      </p>
       <button
         onClick={() => handleDeleteContact(id)}
-        className={styles.buttonDelete}
         type="button"
+        className={styles.btn}
       >
         Delete
       </button>
     </li>
   ));
+
   return (
     <div>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <Loader />}
       {error && <ErrorMessage message={error} />}
-      <ul>{elements}</ul>
+      <ul className={styles.list}>{elements}</ul>
     </div>
   );
 };
