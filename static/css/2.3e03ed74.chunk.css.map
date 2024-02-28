@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/2.3e03ed74.chunk.css","mappings":"AAAA,gCAEE,kBAAmB,CADnB,YAAa,CAEb,qBACF,CAEA,4BAEE,cAAe,CADf,eAEF","sources":["pages/HomePage/home-page.module.css"],"sourcesContent":[".heroContainer {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n}\n\n.heroTitle {\n  margin-top: 40px;\n  font-size: 50px;\n}\n"],"names":[],"sourceRoot":""}

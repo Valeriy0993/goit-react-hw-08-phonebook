@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[2],{594:function(e,o,c){c.r(o),c.d(o,{default:function(){return h}});var t=c.p+"static/media/phone-book.63187ccf18b7c9dc7c05.jpeg",a="home-page_heroContainer__JQNg3",n="home-page_heroTitle__DaCv2",r=c(184),h=function(){return(0,r.jsx)("section",{children:(0,r.jsxs)("div",{className:a,children:[(0,r.jsx)("h1",{className:n,children:"Welcome to Phone book"}),(0,r.jsx)("img",{src:t,alt:"Phone book",width:200})]})})}}}]);
+//# sourceMappingURL=2.ed966dd4.chunk.js.map
