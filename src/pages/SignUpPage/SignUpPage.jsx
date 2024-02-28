@@ -8,6 +8,8 @@ import {
   selectAuthError,
 } from '../../redux/auth/auth-selectors';
 
+import styles from './sign-up-page.module.css';
+
 const SignUpPage = () => {
   const authLoading = useSelector(selectAuthLoading);
   const authError = useSelector(selectAuthError);
@@ -19,7 +21,7 @@ const SignUpPage = () => {
 
   return (
     <main>
-      <div>
+      <div className={styles.signUpContainer}>
         <h1>Please Sign Up</h1>
         {authLoading && <Loader />}
         <SignUpForm onSubmit={handleSignup} />

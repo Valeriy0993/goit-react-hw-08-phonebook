@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 
+import styles from './navbar.module.css';
+
 import NavbarMenu from './NavbarMenu/NavbarMenu';
 import NavbarUser from './NavbarUser/NavbarUser';
 import NavbarAuth from './NavbarAuth/NavbarAuth';
@@ -9,7 +11,7 @@ const Navbar = () => {
   const isLogin = useSelector(selectIsLogin);
 
   return (
-    <nav>
+    <nav className={styles.navbar}>
       <NavbarMenu />
       {isLogin ? <NavbarUser /> : <NavbarAuth />}
     </nav>

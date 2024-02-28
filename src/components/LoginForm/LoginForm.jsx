@@ -1,5 +1,7 @@
 import { useState, useId } from 'react';
 
+import styles from './login-form.module.css';
+
 const INITIAL_STATE = {
   email: '',
   password: '',
@@ -34,8 +36,8 @@ const LoginForm = ({ onSubmit }) => {
   const { email, password } = state;
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.formContainer}>
         <label htmlFor={emailId}>Email:</label>
         <input
           value={email}
@@ -46,9 +48,10 @@ const LoginForm = ({ onSubmit }) => {
           autoComplete="username"
           placeholder="Email"
           required
+          className={styles.loginInput}
         />
       </div>
-      <div>
+      <div className={styles.formContainer}>
         <label htmlFor={passwordId}>Password:</label>
         <input
           value={password}
@@ -59,9 +62,12 @@ const LoginForm = ({ onSubmit }) => {
           autoComplete="current-password"
           placeholder="Password"
           required
+          className={styles.loginInput}
         />
       </div>
-      <button type="submit">Login</button>
+      <button className={styles.loginBtn} type="submit">
+        Login
+      </button>
     </form>
   );
 };

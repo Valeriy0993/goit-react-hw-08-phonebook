@@ -1,12 +1,26 @@
-.buttonDelete {
-  margin-left: 10px;
-  border-radius: 10px;
-  border-style: none;
-  background-color: rgb(201, 200, 200);
+.item {
+  display: flex;
+  align-items: center;
 }
 
-.buttonDelete:hover,
-buttonDelete:focus {
-  background-color: rgb(100, 100, 232);
+.list {
+  padding-left: 16px;
+  line-height: 0.8;
+}
+
+.btnDelete {
+  margin-left: 10px;
+  padding: 5px 10px;
+  width: 70px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: lightblue;
+  border: 1px solid;
+}
+
+.btnDelete:hover,
+btnDelete:focus {
+  color: white;
+  background-color: red;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
 }

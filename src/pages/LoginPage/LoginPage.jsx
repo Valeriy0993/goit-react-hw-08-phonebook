@@ -9,6 +9,8 @@ import {
   selectAuthError,
 } from '../../redux/auth/auth-selectors';
 
+import styles from './login-page.module.css';
+
 const LoginPage = () => {
   const authLoading = useSelector(selectAuthLoading);
   const authError = useSelector(selectAuthError);
@@ -20,8 +22,8 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
-      <h1>Login page</h1>
+    <div className={styles.loginContainer}>
+      <h1>Please Log In</h1>
       {authLoading && <Loader />}
       <LoginForm onSubmit={handleLogin} />
       {authError && <p style={{ color: 'red' }}>{authError}</p>}

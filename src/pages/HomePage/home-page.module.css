@@ -1,0 +1,10 @@
+.heroContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heroTitle {
+  margin-top: 40px;
+  font-size: 50px;
+}

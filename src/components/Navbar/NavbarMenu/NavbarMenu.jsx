@@ -1,6 +1,8 @@
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
+import styles from './navbar-menu.module.css';
+
 import { selectIsLogin } from '../../../redux/auth/auth-selectors';
 import menuItems from './menu-items';
 
@@ -12,12 +14,14 @@ const NavbarMenu = () => {
     : menuItems;
 
   const elements = filteredMenuItems.map(({ id, to, text }) => (
-    <li key={id}>
-      <NavLink to={to}>{text}</NavLink>
+    <li className={styles.navMenuList} key={id}>
+      <NavLink className={styles.homeNav} to={to}>
+        {text}
+      </NavLink>
     </li>
   ));
 
-  return <ul>{elements}</ul>;
+  return <ul className={styles.navMenuContainer}>{elements}</ul>;
 };
 
 export default NavbarMenu;

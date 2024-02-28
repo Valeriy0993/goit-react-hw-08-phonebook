@@ -1,5 +1,7 @@
 import { useState, useId } from 'react';
 
+import styles from './sign-up-form.module.css';
+
 const INITIAL_STATE = {
   name: '',
   email: '',
@@ -36,8 +38,8 @@ const SignUpForm = ({ onSubmit }) => {
   const { name, email, password } = state;
 
   return (
-    <form autoComplete="off" onSubmit={handleSubmit}>
-      <div>
+    <form autoComplete="off" onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.formContainer}>
         <label htmlFor={nameId}>Name</label>
         <input
           value={name}
@@ -47,9 +49,10 @@ const SignUpForm = ({ onSubmit }) => {
           placeholder="Name"
           minLength={3}
           required
+          className={styles.signUpInput}
         />
       </div>
-      <div>
+      <div className={styles.formContainer}>
         <label htmlFor={emailId}>Email</label>
         <input
           value={email}
@@ -60,9 +63,10 @@ const SignUpForm = ({ onSubmit }) => {
           placeholder="Email"
           autoComplete="username"
           required
+          className={styles.signUpInput}
         />
       </div>
-      <div>
+      <div className={styles.formContainer}>
         <label htmlFor={passwordId}>Password</label>
         <input
           value={password}
@@ -74,9 +78,12 @@ const SignUpForm = ({ onSubmit }) => {
           placeholder="Password"
           autoComplete="current-password"
           required
+          className={styles.signUpInput}
         />
       </div>
-      <button type="submit">Sign Up</button>
+      <button className={styles.signUpBtn} type="submit">
+        Sign Up
+      </button>
     </form>
   );
 };

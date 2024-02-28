@@ -2,6 +2,7 @@
   width: 200px;
   margin-top: 5px;
   outline: none;
+  height: 20px;
 }
 
 .filterInput:focus {

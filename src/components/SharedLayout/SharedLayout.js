@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import Navbar from '../Navbar/Navbar';
+import Navbar from 'components/Navbar/Navbar';
 
 const SharedLayout = () => {
   return (

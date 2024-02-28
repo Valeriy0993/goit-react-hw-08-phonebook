@@ -1,0 +1,40 @@
+.form {
+  border: 2px solid;
+  width: 400px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.signUpInput {
+  width: 200px;
+  margin-top: 5px;
+  outline: none;
+  height: 20px;
+}
+
+.signUpInput:focus {
+  border: 2px solid blue;
+}
+
+.signUpBtn {
+  padding: 5px 10px;
+  width: 100px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: lightblue;
+  border: 1px solid;
+}
+
+.signUpBtn:hover,
+signUpBtn:focus {
+  color: white;
+  background-color: blue;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}

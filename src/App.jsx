@@ -29,7 +29,7 @@ export const App = () => {
           <Route index element={<HomePage />} />
           <Route element={<PublicRoute />}>
             <Route path="signup" element={<SignUpPage />} />
-            <Route path="/login" element={<LoginPage />} />
+            <Route path="login" element={<LoginPage />} />
           </Route>
           <Route element={<PrivateRoute />}>
             <Route path="phonebook" element={<MyContacts />} />

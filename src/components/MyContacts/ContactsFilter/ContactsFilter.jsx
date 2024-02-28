@@ -14,7 +14,7 @@ const ContactFilter = () => {
       onChange={handleChange}
       name="filter"
       placeholder="Search"
-      className={styles.input}
+      className={styles.filterInput}
     />
   );
 };

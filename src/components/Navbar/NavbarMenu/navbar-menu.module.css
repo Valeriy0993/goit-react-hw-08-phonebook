@@ -1,0 +1,19 @@
+.navMenuList {
+  list-style: none;
+}
+
+.homeNav {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+
+.homeNav:hover {
+  color: blue;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navMenuContainer {
+  display: flex;
+  gap: 20px;
+}
